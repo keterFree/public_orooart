@@ -1,0 +1,1246 @@
+/* Fonts */
+@font-face {
+    font-family: 'MyFont';
+    src: url('assets/fonts/CoalhandLuke TRIAL.otf') format('opentype'),
+        url('assets/fonts/CoalhandLuke TRIAL.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'hHamba';
+    src: url('assets/fonts/hHamba.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SudsierDemo';
+    src: url('assets/fonts/Sudsier Demo-SVG.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SportfieldVarsity';
+    src: url('assets/fonts/Sportfield Varsity-Scrible.otf') format('opentype'),
+        url('assets/fonts/Sportfield Varsity-Scrible.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'ChaosManualDEMO';
+    src: url('assets/fonts/ChaosManualDEMO-Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'PARISREBEL';
+    src: url('assets/fonts/PARISREBEL.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Caudia';
+    src: url('assets/fonts/Caudia Xovier - Demo.ttf') format('truetype');
+}
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    font-style: normal;
+    font-family: 'hHamba', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+/* Body and Main */
+body {
+    background-image: url("assets/images/paper2.webp");
+    background-size: contain;
+    background-position: end;
+    background-repeat: repeat-y;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Header */
+header {
+    font-family: 'PARISREBEL', sans-serif;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 2vh;
+}
+
+.sketch-highlight {
+    position: relative;
+    padding: 5px;
+}
+
+.sketch-highlight:before {
+    content: "";
+    z-index: -1;
+    left: 0em;
+    top: 0em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: darkblue;
+    position: absolute;
+    border-right-color: transparent;
+    width: 100%;
+    height: 1em;
+    transform: rotate(2deg);
+    opacity: 0.5;
+    border-radius: 0.25em;
+}
+
+.sketch-highlight:after {
+    content: "";
+    z-index: -1;
+    left: 0em;
+    top: 0em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: darkblue;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.5;
+    border-radius: 0.25em;
+}
+
+.hamburger {
+    z-index: 20;
+}
+
+nav,
+.nav-links {
+    display: flex;
+    padding: 0.3em;
+    gap: 0.3em;
+    flex-direction: column;
+    /* flex-direction: row; */
+    padding: 1vw;
+}
+
+nav,
+.nav-links {
+    align-items: flex-end;
+    gap: 4vh;
+    position: fixed;
+    top: 20vh;
+    right: 5vw;
+    transition: 1s ease-in-out;
+}
+
+nav {
+    top: 2vh;
+    right: 1vw;
+
+}
+
+nav button,
+button {
+    z-index: 5;
+    background-color: rgba(255, 127, 80, 0.75);
+    padding: 0.4em;
+    border: none;
+    transition: 0.3s ease-in-out;
+}
+
+#title span {
+    background-color: rgba(154, 100, 0, 0.45);
+}
+
+nav button a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Applying staggered animation delay using nth-child */
+nav button:nth-child(1) {
+    transform: translateX(-25%) rotate(-10deg);
+}
+
+nav button:nth-child(2) {
+    transform: translateX(-22%) rotate(8deg);
+}
+
+nav button:nth-child(3) {
+    transform: translateX(20%) rotate(-3deg);
+}
+
+nav button:nth-child(4) {
+    transform: translateX(18%) rotate(10deg);
+}
+
+nav button:nth-child(5) {
+    transform: translateX(12%) rotate(-6deg);
+}
+
+nav button:hover {
+    background-color: rgba(255, 127, 80, 0.95);
+    transform: translateX(0) rotate(0deg);
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.3em;
+}
+
+#logo img {
+    max-width: 15em;
+    transform: translateX(-2em);
+}
+
+#logo div {
+    transform: translateY(-4em);
+}
+
+#logo div b {
+    /* font-family: 'SportfieldVarsity', sans-serif; */
+    font-size: 4.5em;
+    letter-spacing: 0.005em;
+}
+
+#logo div p {
+    /* background-color: red; */
+    padding: 0.2em;
+    width: fit-content;
+    transform: translateY(-10px) rotate(-6deg);
+    background-image: linear-gradient(to right, rgba(210, 105, 30, 0.259) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation-delay: 0.5s;
+}
+
+.highlights {
+    animation: highlightt 0.5s forwards;
+}
+
+@keyframes highlightt {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+#motto {
+    padding: 0.3em;
+    font-family: 'MyFont', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* SVG container */
+#svg-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+    max-height: 445px;
+}
+
+#svg-container p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+}
+
+path {
+    transition: stroke-dashoffset 2s ease;
+}
+
+.animate {
+    opacity: 0;
+    animation: draw 1.5s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes draw {
+    from {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        opacity: 0;
+    }
+
+    to {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+}
+
+/* Additional Sections */
+.more,
+.inmore {
+    display: flex;
+    padding: 2em;
+}
+
+/* Custom List */
+.custom-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.custom-list-item {
+    display: flex;
+    align-items: start;
+}
+
+.custom-list-item p {
+    position: relative;
+    padding-left: 10px;
+}
+
+.custom-list-item img {
+    max-width: 10px;
+    height: auto;
+}
+
+/* Points Section */
+#points1 {
+    flex: 1;
+    /* max-width: 60%; */
+}
+
+.points {
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.points p {
+    font-size: 1.5em;
+}
+
+/* Individual p transformations and delays */
+#p21 {
+    transform: translateX(-65%) rotate(-10deg);
+}
+
+#p22 {
+    transform: translateX(-25%) rotate(-10deg);
+}
+
+#p23 {
+    transform: translateX(-25%) rotate(-8deg);
+}
+
+#p24 {
+    transform: translateX(-30%) rotate(-4deg);
+}
+
+#points2 {
+    max-height: 445px;
+}
+
+#points2 p {
+    font-family: 'ChaosManualDEMO', sans-serif;
+    padding: 0.2em;
+    width: fit-content;
+    background-image: linear-gradient(to right, rgba(0, 255, 255, 0.5) 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    /* animation: highlightt 0.5s forwards ease-out; */
+    transform-origin: left;
+    animation-delay: 1.9s;
+    font-size: medium;
+}
+
+/* Applying staggered animation delay using nth-child */
+#points2 p:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#points2 p:nth-child(2) {
+    animation-delay: 1.3s;
+}
+
+#points2 p:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+/* wat we do */
+section {
+    padding: 2em;
+    border: none;
+}
+
+h2,
+h3 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.bento-item ul li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.base {
+    font-weight: bold;
+}
+
+.coming-soon {
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Bento grid layout */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.bento-item h3 {
+    margin-top: 0;
+}
+
+li {
+    text-align: start;
+}
+
+/* wo we are*/
+#who {
+    padding: 1vw;
+    font-size: x-large;
+    transform: rotate(-10deg);
+}
+
+#done {
+    display: flex;
+    justify-content: center;
+}
+
+/* wo we are*/
+#done div {
+    padding: 1vw;
+    font-size: x-large;
+    /* transform: rotate(-10deg); */
+}
+
+.personal-link {
+    text-decoration: none;
+    font-family: inherit;
+    color: aliceblue;
+}
+
+.b1 {
+    display: flex;
+    align-items: center;
+}
+
+.c1 {
+    position: relative;
+    display: flex;
+    width: fit-content;
+}
+
+.c2 {
+    padding: 2vw;
+}
+
+.c2 b,
+.c2 p {
+    font-family: 'Caudia', sans-serif;
+    font-size: xx-large;
+}
+
+#c2-2 {
+    text-align: end;
+}
+
+.imag1,
+.imag2 {
+    max-width: 30vw;
+}
+
+.ferdi {
+    transform: translateY(-40px);
+}
+
+.max {
+    transform: translateY(-50px);
+}
+
+.keter {
+    transform: translateY(-90px) translatex(-60px);
+}
+
+.imag1 {
+    position: absolute;
+    clip-path: polygon(0 0, 80% 0, 40% 80%, 0 80%);
+}
+
+#b1-2 .imag1 {
+    clip-path: polygon(0 0, 100% 0, 100% 60%, 0 60%);
+}
+
+/* #b1-2 .c1 .imag1 {
+    max-width: 40vw;
+    clip-path: polygon(0 0, 0 0, 0 0, 0 0);
+} */
+
+#b1-3 .imag1 {
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+}
+
+
+.circular-container {
+    z-index: 10;
+    background-color: rgba(165, 42, 42, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 25vw;
+    max-height: 25vw;
+}
+
+/* history */
+#history {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.mockup-container {
+    display: flex;
+    justify-content: center;
+}
+
+/* General container styling */
+.card {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+/* Shared styles */
+.card .highlight,
+.tophighlight {
+    z-index: 10;
+    margin-left: 4%;
+    font-family: 'ChaosManualDEMO', sans-serif;
+    padding: 0.2em;
+    width: fit-content;
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    transform-origin: left;
+    animation-delay: 0.5s;
+    color: aliceblue;
+    font-size: medium;
+}
+
+/* Specific styles for .card .highlight */
+.card .highlight {
+    transform: rotate(-5deg) translateY(20px);
+    background-image: linear-gradient(to right, rgba(41, 11, 11, 0.95) 50%, transparent 50%);
+    font-size: large;
+}
+
+/* Specific styles for #history .tophighlight */
+#history .tophighlight {
+    transform: rotate(-1deg);
+    background-image: linear-gradient(to right, rgba(255, 166, 0, 0.4) 50%, transparent 50%);
+    font-size: xx-large;
+    color: #000;
+}
+
+
+/* Slider container */
+.slider {
+    display: flex;
+    width: 90%;
+    position: relative;
+    border-radius: 1%;
+    overflow-x: hidden;
+}
+
+.slides {
+    padding: 0 15px;
+    display: flex;
+    gap: 15px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual image styling */
+.pimg {
+    max-width: 33.33%;
+    /* Each image takes up 33.33% of the container width */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.pimgm {
+    max-width: 20%;
+    /* Each image takes up 33.33% of the container width */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Controls (prev/next buttons) */
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+}
+
+.controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    min-width: 40px;
+    transition: background-color 0.3s;
+}
+
+.controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.sticky {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 200 / 193;
+    height: 60%;
+    background-image: url("assets/images/yellowsticky-removebg-preview.png");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    z-index: 10;
+    padding: 2%;
+    transform: rotate(-20deg) translateY(70%);
+    right: 5%;
+    transition: 0.5s ease-in-out;
+    font-family: 'ChaosManualDEMO', sans-serif;
+    font-size: medium;
+}
+
+.stickyend {
+    height: 85%;
+    transform: rotate(0deg) translateY(0);
+}
+
+.sticky {
+    height: 40%;
+}
+
+/* Hide scrollbars */
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* footer */
+
+/* Footer */
+footer .footer-content-text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* align-items: start; */
+}
+
+footer .social-links {
+    /* flex: 1; */
+    margin-right: 20px;
+}
+
+
+
+
+footer .social-links ul {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .social-links ul li a {
+    color: rgba(240, 248, 255, 0.8);
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .social-links ul li a:hover {
+    color: white;
+}
+
+.Footlogo {
+    flex-flow: column;
+}
+
+.Footlogo img {
+    max-width: 15vw;
+}
+
+.realistic-marker-highlight {
+    position: relative;
+    width: fit-content;
+}
+
+.realistic-marker-highlight:before {
+    content: "";
+    background-color: #ffbd6d;
+    width: 100%;
+    height: 2em;
+    position: absolute;
+    z-index: -1;
+    filter: url(.marker-shape);
+    left: -0.25em;
+    top: 0.1em;
+    padding: 0 0.25em;
+}
+
+footer {
+    /* padding: 1vw; */
+    /* min-width: 100%; */
+    z-index: 15;
+}
+
+footer .footer-content {
+    border-top: rgba(0, 0, 0, 0.5) 5px solid;
+    border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+    min-height: 30vh;
+    padding: 1vw;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    /* margin-bottom: 10px; */
+}
+
+p {
+    font-size: 16px;
+    /* color: #666; */
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 50vw;
+}
+
+.contact-form button {
+    background-color: transparent;
+    font-size: x-large;
+    z-index: 5;
+    /* padding: 0.4em; */
+    border: none;
+    transition: 0.3s ease-in-out;
+    transform: rotate(-6deg) translateY(-10px);
+}
+
+.form-row {
+    display: flex;
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border: transparent;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+    background-color: transparent;
+    font-size: 14px;
+    outline: none;
+}
+
+input[type="text"],
+input[type="email"] {
+    flex: 1;
+}
+
+textarea {
+    min-height: 80px;
+}
+
+.in-touch {
+    display: flex;
+    justify-content: space-between;
+    padding: 3vw;
+    margin-top: 10vh;
+    gap: 2vh;
+}
+
+.in-touch #call {
+    position: relative;
+    /* max-width: 40%; */
+    /* background-color: aqua; */
+
+}
+
+.in-touch #call p {
+    max-width: 98%;
+    font-size: xx-large;
+    font-family: 'Caudia', sans-serif;
+
+}
+
+#toTop {
+    min-width: 40px;
+    aspect-ratio: 1;
+    background-color: #775b3a6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 8vh;
+    right: 4vw;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mockup-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .slides {
+        flex-direction: column;
+    }
+
+    .pimg {
+        max-width: 100%;
+    }
+
+    .sticky {
+        margin: 0;
+        aspect-ratio: 200 / 193;
+        height: auto;
+        width: 60%;
+        bottom: 0;
+        transform: rotate(-20deg) translateY(40%);
+        padding: 4%;
+        left: 15px;
+    }
+
+    .controls {
+        display: none;
+    }
+
+    .in-touch {
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .in-touch #call {
+        width: 100%;
+    }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+    #hero {
+        flex-direction: column;
+    }
+
+    .b1 {
+        flex-direction: column;
+        margin-bottom: 5vh;
+    }
+
+    .imag1,
+    .imag2 {
+        max-width: 90vw;
+    }
+
+    .circular-container {
+        max-width: 80vw;
+        max-height: 80vw;
+    }
+
+    #b1-2 {
+        /* background-color: #ffbd6d; */
+        flex-direction: column-reverse;
+    }
+
+    .inmore {
+        flex-direction: column;
+    }
+
+    #points2 {
+        max-height: 445px;
+    }
+
+    #points2 p {
+        font-size: x-large;
+        /* transform: translateX(0); */
+    }
+
+    #p21 {
+        transform: translateX(-5%) rotate(-4deg);
+    }
+
+    #p22 {
+        transform: translateX(2%) rotate(1deg);
+    }
+
+    #p23 {
+        transform: translateX(-2%) rotate(-1deg);
+    }
+
+    #p24 {
+        transform: translateX(-3%) rotate(4deg);
+    }
+
+    footer .footer-content-text {
+        flex-direction: column;
+        padding: 3vw;
+    }
+
+
+    nav button,
+    button {
+        z-index: 25;
+        background-color: rgba(255, 127, 80, 0.96);
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+}
+
+.navOnPortfolio {
+    flex-direction: row;
+    top: 0;
+    z-index: 30;
+}
+
+@media (max-width: 1100px) {
+    .more {
+        flex-direction: column;
+    }
+
+    .point1 {
+        max-width: 100%;
+    }
+}
+
+
+/* provisional border */
+
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+
+.border {
+    padding: 0.5em;
+    border: none;
+}
+
+.is-drawn {
+    border-radius: 255px 15px 255px 15px / 15px 255px 15px 255px;
+    animation: drawTriangle 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.8s;
+}
+
+@keyframes drawTriangle {
+    0% {
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                0 0,
+                0 0,
+                /* Second line */
+                0 0,
+                0 0,
+                0 0,
+                0 0,
+                0 0,
+                /* Third line */
+                0 0,
+                0 0,
+                0 0,
+                0 0,
+                0 0,
+                /* Fourth line */
+                0 0,
+                0 0,
+                0 0,
+                0 0);
+    }
+
+    0.1% {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                0 0,
+                0 min(8%, 13px),
+                /* Second line */
+                min(8%, 13px) min(8%, 13px),
+                0 0,
+                0 0,
+                0 0,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                /* Third line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 100%,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                /* Fourth line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                0 100%,
+                min(8%, 13px) calc(100% - min(8%, 13px)));
+    }
+
+    23.9% {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                /* Second line */
+                calc(100% - min(8%, 13px)) 0,
+                100% 0,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                /* Third line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 100%,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                /* Fourth line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                0 100%,
+                min(8%, 13px) calc(100% - min(8%, 13px)));
+    }
+
+    50% {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                /* Second line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                /* Third line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 100%,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                /* Fourth line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                0 100%,
+                min(8%, 13px) calc(100% - min(8%, 13px)));
+    }
+
+    73.9% {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                /* Second line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                /* Third line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                100% 100%,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                /* Fourth line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                0 100%,
+                min(8%, 13px) calc(100% - min(8%, 13px)));
+    }
+
+    100% {
+        border: 2px solid rgba(0, 0, 0, 0.7);
+        clip-path: polygon(
+                /* Inner */
+                min(8%, 13px) min(8%, 13px),
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                min(8%, 13px) min(8%, 13px),
+                /* First line */
+                0 0,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                /* Second line */
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                100% 100%,
+                100% 0,
+                calc(100% - min(8%, 13px)) min(8%, 13px),
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                /* Third line */
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                0 100%,
+                100% 100%,
+                calc(100% - min(8%, 13px)) calc(100% - min(8%, 13px)),
+                min(8%, 13px) calc(100% - min(8%, 13px)),
+                /* Fourth line */
+                min(8%, 13px) min(8%, 13px),
+                0 0,
+                0 100%,
+                min(8%, 13px) calc(100% - min(8%, 13px)));
+    }
+}
+
+.container {
+    /* height: 50vw; */
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.circle-sketch-highlight {
+    position: relative;
+}
+
+.circle-sketch-highlight:before {
+    content: "";
+    z-index: -1;
+    left: -0.5em;
+    top: -0.1em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    position: absolute;
+    border-right-color: transparent;
+    width: 100%;
+    height: 1em;
+    transform: rotate(2deg);
+    opacity: 0.7;
+    border-radius: 50%;
+    padding: 0.1em 0.25em;
+}
+
+.circle-sketch-highlight:after {
+    content: "";
+    z-index: -1;
+    left: -0.5em;
+    top: 0.1em;
+    padding: 0.1em 0.25em;
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 1em;
+    transform: rotate(-1deg);
+    opacity: 0.7;
+    border-radius: 50%;
+}
