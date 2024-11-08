@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/937fb4a4f7.js" crossorigin="anonymous"></script>
+    <title>OrooArt | Portfolio</title>
+
+    <link rel="icon" href="assets/images/A-logo.png" type="image/png">
+</head>
+
+<body>
+    <header>
+        <div id="title"><span class="sketch-highlight">HOME</span></div>
+        <!-- <p>Circle sketch <span class="circle-sketch-highlight">Highlight Text</span> Effect</p>
+        <p>Realistic Marker <span class="realistic-marker-highlight">Highlight Text</span> Effect</p> -->
+        <nav id="nav">
+            <div class="hamburger" id="hamburger">&#9776;</div> <!-- Hamburger icon -->
+            <div id="nav-links" class="nav-links">
+                <button><a href="index.html">Home</a></button>
+                <button><a href="index.html">Services</a></button>
+                <button><a href="index.html">About us</a></button>
+                <button><a href="#">Portfolio</a></button>
+                <button><a href="index.html">Get in Touch</a></button>
+            </div>
+        </nav>
+        <style>
+            .nav-links {
+                flex-direction: column;
+
+            }
+        </style>
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', () => {
+                // Toggle the display of the nav links
+                if (navLinks.style.display === 'flex') {
+                    navLinks.style.display = 'none';
+                } else {
+                    window.location.hash = '#hero';
+                    navLinks.style.display = 'flex';
+                }
+            });
+            const portfolio = document.getElementById('title');
+
+            // Function to redirect to portfolio.html
+            const redirectToPortfolio = () => {
+                window.location.href = 'index.html';
+            };
+            if (portfolio) {
+                portfolio.addEventListener('click', redirectToPortfolio);
+            }
+        </script>
+    </header>
+    <svg xmlns="//www.w3.org/2000/svg" version="1.1" class="svg-filters" style="display:none;">
+        <defs>
+            <filter class="marker-shape">
+                <feTurbulence type="fractalNoise" baseFrequency="0 0.15" numOctaves="1" result="warp" />
+                <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp" />
+            </filter>
+        </defs>
+    </svg>
+    <main>
+        <div id="history">
+            <div class="tophighlight highlight"> Some of what we've done:</div>
+
+            <h3>Graphic Designs</h3>
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/Auctus-Auction" class="personal-link">
+                        POSTERS
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/BLACK.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/Edna's_smocha.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/Mashujaa.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/NCHS-poster.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/victech-mockup3.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/LWT-6.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/KABU_KARATE.png" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/pitch-4.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/pitch-1.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/poster/NC-Series-10-28.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <!-- <img class="pimg" src="assets/images/oroo/me_design/poster/NC-Series-10-01#.jpg"
+                                loading="lazy" alt="Mockup Image 1"> -->
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/allama mockup.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/orooart-business-card-mockup.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                        </div>
+                    </div>
+                    <!-- <div class="sticky">
+                        <b>Web Application</b>. Automate your business by streamlining operations with efficient,
+                        digital processes,
+                        replacing manual and outdated methods.
+                    </div> -->
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/Auctus-Auction" class="personal-link">
+                        BUSSINESS CARDS
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/NC-Series-10-04_1.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/allan-bcard-LAST.JPEg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/nchs-dignitaries.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/g-mouse-NC-Series.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <!-- <img class="pimg" src="assets/images/oroo/me_design/cards/betterbutter-sticker.png"
+                            loading="lazy" alt="Mockup Image 1"> -->
+
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/urban_living_furniture_2.png"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/cards/allan-bcard.png" loading="lazy"
+                                alt="Mockup Image 1">
+
+
+                        </div>
+                    </div>
+                    <!-- <div class="sticky">
+                    <b>Web Application</b>. Automate your business by streamlining operations with efficient,
+                    digital processes,
+                    replacing manual and outdated methods.
+                </div> -->
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/Auctus-Auction" class="personal-link">
+                        LOGO DESIGNS
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+
+                            <img class="pimg" src="assets/images/oroo/me_design/Logo/ED7-logo.png" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/Logo/dplogo.png" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/Logo/green-org-initial.jpg"
+                                loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/Logo/green-org.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/oroo/me_design/Logo/alpha-jiri.jpg" loading="lazy"
+                                alt="Mockup Image 1">
+
+                        </div>
+                    </div>
+                    <!-- <div class="sticky">
+                    <b>Web Application</b>. Automate your business by streamlining operations with efficient,
+                    digital processes,
+                    replacing manual and outdated methods.
+                </div> -->
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Application Development</h3>
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/Aussiz_Student_Management_App" class="personal-link">
+                        <i class="fa-brands fa-github fa-beat-fade" style="color: #ffffff;"></i>
+                        AUSSIZE STUDENT MANAGEMENT SYSTEM
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+                            <img class="pimg" src="assets/images/aussizz/login.png" loading="lazy" alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/aussizz/das.png" loading="lazy" alt="Mockup Image 2">
+                            <img class="pimg" src="assets/images/aussizz/student.png" loading="lazy"
+                                alt="Mockup Image 3">
+                        </div>
+                    </div>
+                    <div class="sticky">
+                        <b>Desktop Application</b> Student management system for <a
+                            href="https://aussizeducationandtraining.net/">Aussizz
+                            Education
+                            and Training</a>.Offering storage and Easy access to student data.
+                    </div>
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/Auctus-Auction" class="personal-link">
+                        <i class="fa-brands fa-github fa-beat-fade" style="color: #ffffff;"></i>
+                        AUCTUS BIDDING SYSTEM
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+                            <img class="pimg" src="assets/images/auctus/auctus (1).png" loading="lazy"
+                                alt="Mockup Image 1">
+                            <img class="pimg" src="assets/images/auctus/auctus (2).png" loading="lazy"
+                                alt="Mockup Image 2">
+                            <img class="pimg" src="assets/images/auctus/auctus (3).png" loading="lazy"
+                                alt="Mockup Image 3">
+                            <img class="pimg" src="assets/images/auctus/auctus (4).png" loading="lazy"
+                                alt="Mockup Image 4">
+                        </div>
+                    </div>
+                    <div class="sticky">
+                        <b>Web Application</b>. Automate your business by streamlining operations with efficient,
+                        digital processes,
+                        replacing manual and outdated methods.
+                    </div>
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="highlight">
+                    <a href="https://github.com/keterFree/My-Bible" class="personal-link">
+                        <i class="fa-brands fa-github fa-beat-fade" style="color: #ffffff;"></i>
+                        E-Pistle Church Management System
+                    </a>
+                </div>
+                <div class="mockup-container">
+                    <div class="slider">
+                        <div class="slides">
+                            <img class="pimg pimgm" src="assets/images/epistle/e1.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e2.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e3.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <!-- <img class="pimg pimgm" src="assets/images/epistle/e4.jpg" loading="lazy"
+                                alt="Mockup Image "> -->
+                            <!-- <img class="pimg pimgm" src="assets/images/epistle/e5.jpg" loading="lazy"
+                                alt="Mockup Image "> -->
+                            <img class="pimg pimgm" src="assets/images/epistle/e6.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e7.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e8.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <!-- <img class="pimg pimgm" src="assets/images/epistle/e9.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e10.jpg" loading="lazy"
+                                alt="Mockup Image "> -->
+                            <img class="pimg pimgm" src="assets/images/epistle/e11.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                            <img class="pimg pimgm" src="assets/images/epistle/e12.jpg" loading="lazy"
+                                alt="Mockup Image ">
+                        </div>
+                    </div>
+                    <div class="sticky stickym">
+                        <b>Mobile Application</b>. Automate your business by streamlining operations with efficient,
+                        digital processes,
+                        replacing manual and outdated methods.
+                    </div>
+                    <div class="controls">
+                        <button class="prev" onclick="moveSlide(this, -1)">&#10094;</button>
+                        <button class="next" onclick="moveSlide(this, 1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="in-touch" id="in-touch">
+            <div id="call">
+                <h2>Get in touch</h2>
+                <p>
+                    "Transform your business with cutting-edge digital solutions! Automate operations, secure customer
+                    data, enhance experiences, and grow your online presence. Contact us to get started and build your
+                    future."
+                    <br> <br>Take your bussiness online with us today.
+                </p>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="text" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <textarea id="message" placeholder="Anything we should know?" required></textarea>
+                <button class="realistic-marker-highlight" type="submit">Reach out</button>
+            </form>
+
+        </div>
+        <div class="footer-content">
+            <div class="footer-content-text">
+                <div id="logo">
+
+
+                    <img src="assets/images/A-logo.png" alt="">
+                    <div>
+                        <b>oROOaRT</b>
+                        <p class="highlight">We get your bytes in order </p>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Get in Touch</h3>
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i> +254 745 485 817 / +254 711 372 214</a></li>
+                        <li><a href="#"><i class="fab fa-whatsapp"></i> +254 745 485 817</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope" style="color: #ffffff;"></i>
+                                orooartdesign@gmail.com</a></li>
+                        <li><a href="#"><i class="fab fa-facebook-f"></i> @orooart</a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i> @orooart</a></li>
+                        <li><a href="#"><i class="fab fa-x-twitter"></i> @mastaroroo</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin" style="color: #ffffff;"></i> @masteroroo</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="toTop">
+                    <a href="#hero"><i class="fa-solid fa-jet-fighter-up fa-bounce" style="color: #eceff3;"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
